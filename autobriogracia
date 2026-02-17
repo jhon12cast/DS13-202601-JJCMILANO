@@ -1,0 +1,161 @@
+
+<meta charset="UTF-8">
+<title>Autobiografía - Jhon Castellanos Milano</title>
+
+
+<style>
+/* Reset básico */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #1e1e2f;
+color: #ffffff;
+}
+
+
+header {
+text-align: center;
+padding: 40px 20px;
+background-color: #111;
+}
+
+
+header h1 {
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+
+header p {
+color: #00c3ff;
+font-size: 18px;
+}
+
+
+.contenedor {
+width: 90%;
+max-width: 1000px;
+margin: 40px auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+
+.card {
+background-color: #2c2c3e;
+padding: 20px;
+border-radius: 10px;
+width: 300px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+transform: scale(1.05);
+}
+
+
+.card h2 {
+margin-bottom: 10px;
+color: #00c3ff;
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+background-color: #111;
+margin-top: 40px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+.contenedor {
+flex-direction: column;
+align-items: center;
+}
+}
+</style>
+
+
+
+
+
+
+<header>
+<h1>Jhon Castellanos Milano</h1>
+<p>24 años | Ingeniería de Sistemas | Emprendedor | Atleta Híbrido</p>
+</header>
+
+
+<section class="contenedor">
+
+
+<div class="card">
+<h2>Sobre mí</h2>
+<p>
+Soy estudiante de cuarto semestre de Ingeniería de Sistemas.
+Me considero una persona disciplinada, enfocada en el crecimiento
+profesional y personal.
+</p>
+</div>
+
+
+<div class="card">
+<h2>Formación Académica</h2>
+<p>
+Actualmente curso 4° semestre de Ingeniería de Sistemas,
+desarrollando habilidades en tecnología, programación
+y soluciones digitales.
+</p>
+</div>
+
+
+<div class="card">
+<h2>Emprendimiento</h2>
+<p>
+Trabajo en mi emprendimiento de confección y venta de prendas
+urbanas para hombre. Algunos días trabajo desde casa y otros
+atiendo en mi local ubicado en el Centro Comercial Lo Nuestro.
+</p>
+</div>
+
+
+<div class="card">
+<h2>Vida Deportiva</h2>
+<p>
+Soy atleta híbrido enfocado en levantamiento olímpico y me
+encuentro en categoría avanzada en CrossFit.
+El deporte es parte fundamental de mi disciplina y mentalidad.
+</p>
+</div>
+
+
+<div class="card">
+<h2>Vida Personal</h2>
+<p>
+Vivo con mi mascota Alana, quien es una parte muy importante
+de mi vida y mi compañera diaria.
+</p>
+</div>
+
+
+</section>
+
+
+<footer>
+<p>© 2026 - Página creada por Jhon Castellanos Milano</p>
+</footer>
+
+
+
