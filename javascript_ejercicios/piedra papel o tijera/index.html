@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Piedra, Papel o Tijera</h1>
+        <p>Escribe un número en T, dale a Jugar y después a Calcular para ver quién ganó.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label class="field">
+            T
+            <input id="tInput" type="number" min="1" max="100" step="1" placeholder="Ej: 5" />
+          </label>
+
+          <button id="btnJugar" type="button">Jugar</button>
+        </div>
+
+        <p id="msg" class="msg" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Resultados</h2>
+        <div id="selects" class="selects"></div>
+
+        <div class="row end">
+          <button id="btnCalcular" type="button" class="hidden">Calcular</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
