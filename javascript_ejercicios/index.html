@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop práctico</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: #f6f7f9;
+        color: #111827;
+        padding: 24px;
+      }
+
+      .container {
+        max-width: 840px;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      header p {
+        margin: 0;
+        color: #6b7280;
+        font-size: 13px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 14px;
+        background: #ffffff;
+      }
+
+      h2 {
+        font-size: 15px;
+        margin: 0 0 10px;
+      }
+
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 13px;
+        color: #6b7280;
+      }
+
+      input[type="number"] {
+        width: 180px;
+        max-width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        background: #ffffff;
+        color: #111827;
+        outline: none;
+      }
+
+      input[type="number"]:focus {
+        border-color: #60a5fa;
+        box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+      }
+
+      button {
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        background: #f3f4f6;
+        color: #111827;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #e5e7eb;
+      }
+
+      .status {
+        font-size: 13px;
+        color: #374151;
+        min-height: 18px;
+      }
+
+      .status strong {
+        color: #111827;
+        font-weight: 600;
+      }
+
+      .hint {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #6b7280;
+        line-height: 1.35;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+          monospace;
+        font-size: 0.95em;
+        color: #1f2937;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Workshop práctico </h1>
+     
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>1) Alert después de X segundos</h2>
+
+          <div class="row">
+            <label>
+              Segundos
+              <input id="segAlert" type="number" min="0" step="0.1" placeholder="Ej: 2.5" />
+            </label>
+
+            <button id="btnAlert" type="button">Mostrar alert</button>
+          </div>
+
+          <p class="status" id="msgAlert"></p>
+        </article>
+
+        <article class="card">
+          <h2>2) 3 promesas con random  y suma</h2>
+
+          <div class="row">
+            <label>
+              Segundos
+              <input id="segProm" type="number" min="0" step="0.1" placeholder="Ej: 1" />
+            </label>
+
+            <button id="btnProm" type="button">Ejecutar promesas</button>
+          </div>
+
+          <p class="status" id="outProm"></p>
+
+     
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+
+      function toMsFromSecondsInput(value) {
+        const s = Number(value);
+        if (!Number.isFinite(s) || s < 0) return null;
+        return Math.round(s * 1000);
+      }
+
+      function randomMs0to100() {
+        return Math.floor(Math.random() * 101);
+      }
+
+      function promesaConTiempoYRandom(baseMs) {
+        const extraMs = randomMs0to100();
+        const totalMs = baseMs + extraMs;
+
+        return new Promise((resolve) => {
+          setTimeout(() => resolve({ extraMs, totalMs }), totalMs);
+        });
+      }
+
+      // 1) Alert después de X segundos
+      $("btnAlert").addEventListener("click", () => {
+        const baseMs = toMsFromSecondsInput($("segAlert").value);
+        if (baseMs === null) {
+          $("msgAlert").textContent = "Ingresa un número válido (>= 0).";
+          return;
+        }
+
+        const secs = (baseMs / 1000).toString();
+        $("msgAlert").innerHTML = `Listo: saldrá en <strong>${secs}</strong> s...`;
+
+        setTimeout(() => {
+          $("msgAlert").textContent = "";
+          alert(`Alert ${secs} segundos después`);
+        }, baseMs);
+      });
+
+      // 2) 3 promesas con random 0–100ms y suma
+      $("btnProm").addEventListener("click", async () => {
+        const baseMs = toMsFromSecondsInput($("segProm").value);
+        if (baseMs === null) {
+          $("outProm").textContent = "Ingresa un número válido (>= 0).";
+          return;
+        }
+
+        $("outProm").textContent = "Ejecutando...";
+
+        const p1 = promesaConTiempoYRandom(baseMs);
+        const p2 = promesaConTiempoYRandom(baseMs);
+        const p3 = promesaConTiempoYRandom(baseMs);
+
+        const results = await Promise.all([p1, p2, p3]);
+        const sumaRandom = results.reduce((acc, r) => acc + r.extraMs, 0);
+
+        $("outProm").innerHTML = `randoms: <strong>${results
+          .map((r) => `${r.extraMs}ms`)
+          .join(", ")}</strong> | suma: <strong>${sumaRandom}ms</strong>`;
+
+        console.log("Resultados promesas:", results, "Suma random (ms):", sumaRandom);
+      });
+    </script>
+  </body>
+</html>
