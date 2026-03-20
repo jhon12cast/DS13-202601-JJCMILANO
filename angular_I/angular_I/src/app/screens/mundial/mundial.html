@@ -1,0 +1,50 @@
+<div class="page-heading">
+  <h1>Partido Amistoso</h1>
+  <span></span>
+</div>
+
+<app-header
+    [title]="'Colombia vs Brasil'"
+    [description]="'Descubre quien gano cada partido amistoso'"
+    [label]="'Cantidad de partidos (1-100)'"
+    [actionName]="'Generar'"
+    (elements)="generateElements($event)"
+></app-header>
+
+@if (elements > 0) {
+  <div class="matches-panel">
+    <h4>Partidos</h4>
+    <p>Ingrese los goles de Brasil y Colombia en cada partido</p>
+
+    @for (partido of partidos; track $index) {
+      <div class="match-row">
+        <span class="match-num">{{$index + 1}}</span>
+
+        <div class="match-inputs">
+          <div class="team-input">
+            <label>Brasil</label>
+            <input type="number" min="0" [(ngModel)]="partidos[$index].brasil" placeholder="Goles"/>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team-input">
+            <label>Colombia</label>
+            <input type="number" min="0" [(ngModel)]="partidos[$index].colombia" placeholder="Goles"/>
+          </div>
+        </div>
+
+        @if (mostrarResultados && resultados[$index]) {
+          <span class="result-tag"
+                [class.tag-ganamos]="resultados[$index] === 'ganamos'"
+                [class.tag-perdimos]="resultados[$index] === 'perdimos'"
+                [class.tag-casi]="resultados[$index] === 'casi ganamos'">
+            {{resultados[$index]}}
+          </span>
+        }
+      </div>
+    }
+
+    <button class="btn-result" (click)="calcularResultados()">Calcular</button>
+  </div>
+} @else {
+  <p class="placeholder-msg">Se debe primero ingresar la cantidad de partidos</p>
+}

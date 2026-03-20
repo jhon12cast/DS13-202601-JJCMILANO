@@ -1,0 +1,20 @@
+<div class="nav">
+  <button [class.active]="option === 1" (click)="changeOption(1)">Juego</button>
+  <button [class.active]="option === 2" (click)="changeOption(2)">Mundial</button>
+  <button class="clear" (click)="changeOption(3)">Clear</button>
+</div>
+
+@switch (this.option) {
+  @case (1) {
+    <app-game></app-game>
+  }
+
+  @case (2) {
+    <app-mundial></app-mundial>
+  }
+  @default {
+    <div class="empty-state">
+      <p>Debe seleccionar una opcion</p>
+    </div>
+  }
+}

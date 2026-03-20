@@ -1,0 +1,10 @@
+<div class="header-card">
+  <h4>{{title}}</h4>
+  <p>{{description}}</p>
+
+  <div class="input-row">
+    <label>{{label}}</label>
+    <input type="number" [(ngModel)]="this.count"/>
+    <button class="btn-action" (click)="calculate()">{{actionName}}</button>
+  </div>
+</div>
