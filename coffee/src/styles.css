@@ -1,0 +1,68 @@
+:root {
+  --color-logo: #6f3900;
+  --color-fondo-claro: #f4eddf;
+  --color-fondo-oscuro: #1f382e;
+  --color-boton: #2c9f52;
+  --color-sorbos-fondo: #d6ead7;
+  --color-texto-oscuro: #16281c;
+  --color-blanco: #ffffff;
+  --font-titulo: 'Merriweather', Georgia, serif;
+  --font-texto: 'Source Sans 3', -apple-system, sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(22, 40, 28, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-texto-oscuro);
+  background: var(--color-blanco);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-titulo);
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1em;
+}

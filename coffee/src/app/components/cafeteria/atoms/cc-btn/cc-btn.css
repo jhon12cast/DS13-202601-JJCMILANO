@@ -1,0 +1,64 @@
+.cc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  text-decoration: none;
+  background: transparent;
+  color: inherit;
+}
+
+.cc-btn--primary {
+  background: var(--color-boton);
+  color: var(--color-blanco);
+}
+
+.cc-btn--primary:hover {
+  background: #248f47;
+  color: var(--color-blanco);
+}
+
+.cc-btn--pedir {
+  width: 100%;
+  background: var(--color-texto-oscuro);
+  color: var(--color-blanco);
+  border: none;
+}
+
+.cc-btn--pedir:hover {
+  background: #1a1f1a;
+  color: var(--color-blanco);
+}
+
+.cc-btn--whatsapp {
+  background: var(--color-boton);
+  color: var(--color-blanco);
+  padding: 1rem 1.5rem;
+}
+
+.cc-btn--whatsapp:hover {
+  background: #248f47;
+  color: var(--color-blanco);
+}
+
+.cc-btn--outline {
+  background: transparent;
+  color: var(--color-boton);
+  border-color: var(--color-boton);
+}
+
+.cc-btn--outline:hover {
+  background: rgba(44, 159, 82, 0.1);
+  color: var(--color-boton);
+}

@@ -1,0 +1,43 @@
+.login-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--color-fondo-claro);
+}
+
+.login-page__back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-boton);
+  text-decoration: none;
+}
+
+.login-page__back:hover {
+  text-decoration: underline;
+}
+
+.login-page__panel {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 1.75rem;
+  background: var(--color-blanco);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.login-page__title {
+  font-family: var(--font-titulo);
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 0 0 1.25rem;
+  color: var(--color-texto-oscuro);
+}
+
+.login-page__notice {
+  padding: 0.65rem 0.75rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  background: rgba(44, 159, 82, 0.12);
+  border-radius: 8px;
+  color: var(--color-texto-oscuro);
+}

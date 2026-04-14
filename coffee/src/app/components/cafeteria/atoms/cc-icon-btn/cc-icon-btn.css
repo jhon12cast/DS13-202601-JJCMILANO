@@ -1,0 +1,14 @@
+.cc-icon-btn {
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  color: var(--color-texto-oscuro);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc-icon-btn:hover {
+  color: var(--color-boton);
+}

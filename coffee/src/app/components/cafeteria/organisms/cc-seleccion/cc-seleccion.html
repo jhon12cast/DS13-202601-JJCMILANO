@@ -1,0 +1,15 @@
+<section id="seleccion" class="cc-seleccion">
+  <h2 class="cc-seleccion__title">Selección Especial</h2>
+  <div class="cc-seleccion__grid">
+    @for (p of productos(); track p.titulo) {
+      <app-cc-product-card
+        [titulo]="p.titulo"
+        [precio]="p.precio"
+        [descripcion]="p.descripcion"
+        [imagenUrl]="p.imagenUrl"
+        [imagenAlt]="p.imagenAlt"
+        (pedir)="pedir.emit(p)"
+      />
+    }
+  </div>
+</section>

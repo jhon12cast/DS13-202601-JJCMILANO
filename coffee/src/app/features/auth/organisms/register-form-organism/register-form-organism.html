@@ -1,0 +1,44 @@
+<form class="auth-form" (ngSubmit)="onSubmit()" [formGroup]="form">
+  <app-auth-form-field
+    fieldId="reg-cedula"
+    label="Cédula"
+    [control]="form.controls.cedula"
+    autocomplete="username"
+  />
+  <app-auth-form-field
+    fieldId="reg-nombre"
+    label="Nombre"
+    [control]="form.controls.nombre"
+    autocomplete="given-name"
+  />
+  <app-auth-form-field
+    fieldId="reg-apellidos"
+    label="Apellidos"
+    [control]="form.controls.apellidos"
+    autocomplete="family-name"
+  />
+  <app-auth-form-field
+    fieldId="reg-correo"
+    label="Correo electrónico"
+    [control]="form.controls.correo"
+    type="email"
+    autocomplete="email"
+  />
+  <app-auth-form-field
+    fieldId="reg-ciudad"
+    label="Ciudad de residencia"
+    [control]="form.controls.ciudad"
+    autocomplete="address-level2"
+  />
+  <app-auth-form-field
+    fieldId="reg-contrasena"
+    label="Contraseña"
+    [control]="form.controls.contrasena"
+    type="password"
+    autocomplete="new-password"
+  />
+  @if (errorMessage) {
+    <p class="auth-form__error">{{ errorMessage }}</p>
+  }
+  <button appAuthSubmit type="submit" [disabled]="form.invalid">Registrarse</button>
+</form>

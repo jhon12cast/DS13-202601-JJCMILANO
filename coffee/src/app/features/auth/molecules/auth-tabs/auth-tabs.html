@@ -1,0 +1,22 @@
+<div class="auth-tabs" role="tablist">
+  <button
+    type="button"
+    role="tab"
+    class="auth-tabs__btn"
+    [class.auth-tabs__btn--active]="active() === 'login'"
+    [attr.aria-selected]="active() === 'login'"
+    (click)="select('login')"
+  >
+    Iniciar sesión
+  </button>
+  <button
+    type="button"
+    role="tab"
+    class="auth-tabs__btn"
+    [class.auth-tabs__btn--active]="active() === 'register'"
+    [attr.aria-selected]="active() === 'register'"
+    (click)="select('register')"
+  >
+    Registro
+  </button>
+</div>

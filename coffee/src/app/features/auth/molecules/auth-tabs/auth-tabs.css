@@ -1,0 +1,29 @@
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(22, 40, 28, 0.15);
+}
+
+.auth-tabs__btn {
+  padding: 0.75rem 1rem;
+  font-family: var(--font-texto);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  background: var(--color-fondo-claro);
+  color: var(--color-texto-oscuro);
+  cursor: pointer;
+}
+
+.auth-tabs__btn--active {
+  background: var(--color-fondo-oscuro);
+  color: var(--color-blanco);
+}
+
+.auth-tabs__btn:hover:not(.auth-tabs__btn--active) {
+  background: rgba(31, 56, 46, 0.08);
+}
