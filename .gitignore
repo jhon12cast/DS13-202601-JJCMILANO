@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.angular/
+*.tsbuildinfo
+
+# IDE / editor
+.cursor/
+.vscode/
+**/.vscode/
+.idea/
+*.swp
+*.swo
+
+# Otros proyectos del workspace (no forman parte de esta entrega)
+DS13-202601-JJCMILANO/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / cache
+npm-debug.log*
+*.log
+.sass-cache/
+
+# Environment
+.env
+.env.local
+
+# Testing
+coverage/

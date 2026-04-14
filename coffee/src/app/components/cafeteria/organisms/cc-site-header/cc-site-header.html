@@ -1,0 +1,43 @@
+<header class="cc-header">
+  <a routerLink="/" class="cc-header__logo" (click)="closeMenu()">COFFEECO</a>
+  <div class="cc-header__actions">
+    <a routerLink="/login" class="cc-header__pill" (click)="closeMenu()">Registro e inicio</a>
+    @if (isSessionActive()) {
+      <a routerLink="/dashboard" class="cc-header__pill cc-header__pill--accent" (click)="closeMenu()">Panel cliente</a>
+    }
+    <button appCcIconBtn ariaLabel="Buscar" type="button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+    </button>
+    <button
+      appCcIconBtn
+      ariaLabel="Abrir menú"
+      type="button"
+      class="cc-header__menu-toggle"
+      [class.cc-header__menu-toggle--open]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="cc-header__bar"></span>
+      <span class="cc-header__bar"></span>
+      <span class="cc-header__bar"></span>
+    </button>
+  </div>
+  <nav
+    class="cc-header__nav"
+    [class.cc-header__nav--open]="menuOpen()"
+    (click)="onOverlayClick($event)"
+  >
+    <ul class="cc-header__nav-list">
+      <li><a routerLink="/" [fragment]="'hero'" (click)="closeMenu()">Inicio</a></li>
+      <li><a routerLink="/" [fragment]="'sorbos'" (click)="closeMenu()">Sorbos de Felicidad</a></li>
+      <li><a routerLink="/" [fragment]="'seleccion'" (click)="closeMenu()">Selección Especial</a></li>
+      <li><a routerLink="/login" (click)="closeMenu()">Registro e inicio de sesión</a></li>
+      @if (isSessionActive()) {
+        <li><a routerLink="/dashboard" (click)="closeMenu()">Panel cliente</a></li>
+      }
+      <li><a routerLink="/" [fragment]="'footer'" (click)="closeMenu()">Contacto</a></li>
+    </ul>
+  </nav>
+</header>

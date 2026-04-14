@@ -1,0 +1,64 @@
+.cc-sorbos {
+  background: var(--color-sorbos-fondo);
+  padding: 3rem 1.5rem;
+}
+
+.cc-sorbos__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cc-sorbos__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.cc-sorbos__image img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 220px;
+  background: var(--color-texto-oscuro);
+}
+
+.cc-sorbos__title {
+  color: var(--color-texto-oscuro);
+  margin-bottom: 0.5em;
+}
+
+.cc-sorbos__text {
+  margin-bottom: 1.25rem;
+  color: var(--color-texto-oscuro);
+}
+
+.cc-sorbos__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-boton);
+  color: var(--color-blanco);
+}
+
+.cc-sorbos__cta:hover {
+  background: #248f47;
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .cc-sorbos__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}

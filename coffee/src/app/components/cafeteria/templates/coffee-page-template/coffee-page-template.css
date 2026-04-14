@@ -1,0 +1,7 @@
+.coffee-page {
+  min-height: 100vh;
+}
+
+.coffee-page__main {
+  padding-top: 0;
+}

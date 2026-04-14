@@ -1,0 +1,10 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form__error {
+  color: #b00020;
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}

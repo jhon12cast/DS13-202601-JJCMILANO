@@ -1,0 +1,15 @@
+<article class="cc-product-card">
+  <div class="cc-product-card__image">
+    <img [src]="imagenUrl()" [alt]="imagenAlt()" />
+  </div>
+  <div class="cc-product-card__body">
+    <div class="cc-product-card__head">
+      <h3 class="cc-product-card__title">{{ titulo() }}</h3>
+      <span class="cc-product-card__price">{{ precio() }}</span>
+    </div>
+    <p class="cc-product-card__text">{{ descripcion() }}</p>
+    <button appCcBtn variant="pedir" type="button" class="cc-product-card__action" (click)="onPedir()">
+      Pedir Ahora
+    </button>
+  </div>
+</article>

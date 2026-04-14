@@ -1,0 +1,20 @@
+<form class="auth-form" (ngSubmit)="onSubmit()" [formGroup]="form">
+  <app-auth-form-field
+    fieldId="login-correo"
+    label="Correo electrónico"
+    [control]="form.controls.correo"
+    type="email"
+    autocomplete="email"
+  />
+  <app-auth-form-field
+    fieldId="login-contrasena"
+    label="Contraseña"
+    [control]="form.controls.contrasena"
+    type="password"
+    autocomplete="current-password"
+  />
+  @if (errorMessage) {
+    <p class="auth-form__error">{{ errorMessage }}</p>
+  }
+  <button appAuthSubmit type="submit" [disabled]="form.invalid">Entrar</button>
+</form>

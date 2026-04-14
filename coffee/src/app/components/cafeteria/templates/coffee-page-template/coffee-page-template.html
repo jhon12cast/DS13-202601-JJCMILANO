@@ -1,0 +1,9 @@
+<div class="coffee-page">
+  <app-cc-site-header />
+  <main class="coffee-page__main">
+    <app-cc-hero />
+    <app-cc-sorbos />
+    <app-cc-seleccion [productos]="productos()" (pedir)="pedir.emit($event)" />
+  </main>
+  <app-cc-site-footer />
+</div>

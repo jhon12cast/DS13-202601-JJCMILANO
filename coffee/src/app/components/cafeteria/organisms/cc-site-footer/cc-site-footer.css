@@ -1,0 +1,101 @@
+.cc-footer {
+  background: var(--color-fondo-oscuro);
+  color: var(--color-blanco);
+  padding: 3rem 1.5rem 2rem;
+}
+
+.cc-footer__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cc-footer__brand {
+  font-family: var(--font-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-logo);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.cc-footer__slogan {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cc-footer__info {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.cc-footer__label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  opacity: 0.9;
+}
+
+.cc-footer__block p {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.cc-footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cc-footer__social-link {
+  color: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cc-footer__social-link:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.cc-footer__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  background: var(--color-boton);
+  color: var(--color-blanco);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.cc-footer__whatsapp:hover {
+  background: #248f47;
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.cc-footer__copy {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .cc-footer__info {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}

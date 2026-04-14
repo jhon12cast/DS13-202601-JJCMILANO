@@ -1,0 +1,26 @@
+.auth-form-field {
+  margin-bottom: 1rem;
+}
+
+.auth-form-field__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--color-texto-oscuro);
+}
+
+.auth-form-field__input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  border: 1px solid rgba(22, 40, 28, 0.25);
+  border-radius: 8px;
+  background: var(--color-blanco);
+}
+
+.auth-form-field__input:focus {
+  outline: 2px solid var(--color-boton);
+  outline-offset: 1px;
+}

@@ -1,0 +1,10 @@
+<div class="auth-form-field">
+  <label class="auth-form-field__label" [attr.for]="fieldId()">{{ label() }}</label>
+  <input
+    class="auth-form-field__input"
+    [id]="fieldId()"
+    [type]="type()"
+    [formControl]="control()"
+    [attr.autocomplete]="autocomplete() || null"
+  />
+</div>

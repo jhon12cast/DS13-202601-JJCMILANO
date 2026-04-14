@@ -1,0 +1,15 @@
+<div class="login-page">
+  <a routerLink="/" class="login-page__back">← Volver al sitio</a>
+  <div class="login-page__panel">
+    <h1 class="login-page__title">Acceso clientes</h1>
+    <app-auth-tabs [active]="tab()" (tabChange)="onTabChange($event)" />
+    @if (notice()) {
+      <p class="login-page__notice">{{ notice() }}</p>
+    }
+    @if (tab() === 'login') {
+      <app-login-form-organism />
+    } @else {
+      <app-register-form-organism (registered)="onRegistered()" />
+    }
+  </div>
+</div>
