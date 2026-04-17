@@ -1,0 +1,113 @@
+:host {
+  display: block;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+input[type="number"] {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100px;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #409eff;
+}
+
+.btn-evaluar,
+.btn-calcular {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-evaluar {
+  background: #409eff;
+  color: #fff;
+}
+
+.btn-evaluar:hover {
+  background: #3a8ee6;
+}
+
+.btn-calcular {
+  background: #67c23a;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.btn-calcular:hover {
+  background: #5daf34;
+}
+
+.estudiantes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.estudiante-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.estudiante-row .label {
+  font-weight: 600;
+  color: #34495e;
+  min-width: 130px;
+}
+
+.resultado {
+  background: #ecf5ff;
+  color: #409eff;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 2px solid #409eff;
+}
