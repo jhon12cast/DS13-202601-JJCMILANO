@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nota Media</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Nota Media</h1>
+        <p>Bob elimina la nota más alta y la más baja. La nota final es el valor medio de las 3 notas. Ingresa N (estudiantes), presiona Evaluar y luego Calcular.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label class="field">
+            N (cantidad de estudiantes)
+            <input id="nInput" type="number" min="1" max="50" step="1" placeholder="Ej: 3" />
+          </label>
+
+          <button id="btnEvaluar" type="button">evaluar</button>
+        </div>
+
+        <p id="msg" class="msg" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Notas de los estudiantes</h2>
+        <div id="estudiantes" class="estudiantes"></div>
+
+        <div class="row end">
+          <button id="btnCalcular" type="button" class="hidden">calcular</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

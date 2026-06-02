@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f7f9;
+  color: #111827;
+  padding: 24px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0;
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.row.end {
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+input[type="number"] {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  outline: none;
+  min-width: 100px;
+}
+
+input[type="number"]:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #111827;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e5e7eb;
+}
+
+.msg {
+  margin-top: 10px;
+  min-height: 18px;
+  color: #6b7280;
+}
+
+.partidos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .partidos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partidoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.partidoRow .field {
+  flex: 0 0 auto;
+}
+
+.partidoRow .resultado {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.partidoRow .resultado.ganamos {
+  color: #059669;
+}
+
+.partidoRow .resultado.perdimos {
+  color: #dc2626;
+}
+
+.partidoRow .resultado.casi {
+  color: #d97706;
+}
+
+.hidden {
+  display: none;
+}

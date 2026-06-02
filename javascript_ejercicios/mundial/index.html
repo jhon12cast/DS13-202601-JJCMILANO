@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partido Amistoso - Colombia vs Brasil</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Partido Amistoso</h1>
+        <p>Colombia vs Brasil. Ingresa casos de prueba, genera los inputs y calcula quién ganó cada partido.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label class="field">
+            casos de prueba
+            <input id="nInput" type="number" min="1" max="100" step="1" placeholder="Ej: 3" />
+          </label>
+
+          <button id="btnGenerar" type="button">Generar</button>
+        </div>
+
+        <p id="msg" class="msg" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Resultados de los partidos</h2>
+        <div id="partidos" class="partidos"></div>
+
+        <div class="row end">
+          <button id="btnCalcular" type="button" class="hidden">Calcular</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
